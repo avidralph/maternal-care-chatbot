@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maternal Care Chatbot</title>
+</head>
+<body>
+    <h1>Maternal Care AI Chatbot</h1>
+    <form action="/ask" method="POST">
+        <label for="question">Ask your question about maternal care:</label><br>
+        <input type="text" id="question" name="question" required><br><br>
+        <button type="submit">Ask</button>
+    </form>
+
+    {% if user_question %}
+    <h2>Your Question:</h2>
+    <p>{{ user_question }}</p>
+    <h2>Chatbot Response:</h2>
+    <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
